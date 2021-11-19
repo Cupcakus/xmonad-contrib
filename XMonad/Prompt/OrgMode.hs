@@ -349,8 +349,8 @@ ppNote clp todo = \case
       Nothing -> pure ""
       Just ti -> (("\n  " <> sched) <>) <$> ppDate ti
     pure $ case clp of
-      Body   c -> mconcat ["* ", todo, " ", str, t, c]
-      Header c -> mconcat ["* ", todo, " [[", c, "][", str,"]]", t]
+      Body   c -> mconcat ["** ", todo, " ", str, t, c]
+      Header c -> mconcat ["** ", todo, " [[", c, "][", str,"]]", t]
 
 ------------------------------------------------------------------------
 -- Parsing
